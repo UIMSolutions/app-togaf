@@ -32,9 +32,11 @@ public {
 
 DApp mynameApp;
 static this() {
-  mynameApp = App
-    .name("mynameApp")
-    .rootPath("/apps/myname")
-    .addRoute(Route("", HTTPMethod.GET, MYNAMEIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, MYNAMEIndexPageController));
+    App("mynameApp", "/apps/myname")
+      .importTranslations()
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
