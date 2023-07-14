@@ -1,1 +1,1 @@
-# Package 📦 apps.myname.tests
+# Package 📦 apps.togaf.tests

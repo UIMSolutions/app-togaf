@@ -1,7 +1,7 @@
-module apps.myname.views.forms;
+module apps.togaf.views.forms;
 
 public {
-  import apps.myname.views.forms.headers;
-  import apps.myname.views.forms.bodies;
-  import apps.myname.views.forms.footers;
+  import apps.togaf.views.forms.headers;
+  import apps.togaf.views.forms.bodies;
+  import apps.togaf.views.forms.footers;
 }

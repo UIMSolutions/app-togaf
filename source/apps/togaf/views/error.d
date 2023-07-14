@@ -3,25 +3,25 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.myname.views.error;
+module apps.togaf.views.error;
 
-import apps.myname;
+import apps.togaf;
 @safe:
 
-class DMYNAMEErrorView : DView {
-  mixin(ViewThis!("MYNAMEErrorView"));
+class DtogafErrorView : DView {
+  mixin(ViewThis!("togafErrorView"));
 
   override void beforeH5(STRINGAA options = null) {
     super.beforeH5(options);
   }
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DMYNAMEErrorView~":DMYNAMEErrorView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DtogafErrorView~":DtogafErrorView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
-      H5Div("APP Myname -> Error")
+      H5Div("APP togaf -> Error")
     ].toH5;
   }
 }
-mixin(ViewCalls!("MYNAMEErrorView"));
+mixin(ViewCalls!("togafErrorView"));
