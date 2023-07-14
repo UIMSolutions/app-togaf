@@ -3,19 +3,19 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module apps.myname.controllers.pages.index;
+module apps.togaf.controllers.pages.index;
 
-import apps.myname;
+import apps.togaf;
 @safe:
 
-class DMYNAMEIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("MYNAMEIndexPageController"));
+class DtogafIndexPageController : DAPPPageController {
+  mixin(ControllerThis!("togafIndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(MYNAMEIndexView(this));
+      .view(togafIndexView(this));
   }
 }
-mixin(ControllerCalls!("MYNAMEIndexPageController"));
+mixin(ControllerCalls!("togafIndexPageController"));

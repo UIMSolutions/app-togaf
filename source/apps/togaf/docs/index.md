@@ -1,1 +1,1 @@
-# Documentation 📄 of app-myname
+# Documentation 📄 of app-togaf
