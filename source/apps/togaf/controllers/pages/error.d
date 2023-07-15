@@ -8,14 +8,14 @@ module apps.togaf.controllers.pages.error;
 import apps.togaf;
 @safe:
 
-class DtogafErrorPageController : DAPPPageController {
-  mixin(ControllerThis!("togafErrorPageController"));
+class DErrorPageController : DPageController {
+  mixin(ControllerThis!("ErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(togafErrorView(this));
+      .view(ErrorView(this));
   }
 }
-mixin(ControllerCalls!("togafErrorPageController"));
+mixin(ControllerCalls!("ErrorPageController"));

@@ -8,14 +8,14 @@ module apps.togaf.controllers.pages.index;
 import apps.togaf;
 @safe:
 
-class DtogafIndexPageController : DAPPPageController {
-  mixin(ControllerThis!("togafIndexPageController"));
+class DIndexPageController : DPageController {
+  mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(togafIndexView(this));
+      .view(IndexView(this));
   }
 }
-mixin(ControllerCalls!("togafIndexPageController"));
+mixin(ControllerCalls!("IndexPageController"));

@@ -8,15 +8,15 @@ module apps.togaf.views.error;
 import apps.togaf;
 @safe:
 
-class DtogafErrorView : DView {
-  mixin(ViewThis!("togafErrorView"));
+class DErrorView : DView {
+  mixin(ViewThis!("ErrorView"));
 
   override void beforeH5(STRINGAA options = null) {
     super.beforeH5(options);
   }
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DtogafErrorView~":DtogafErrorView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DErrorView~":DErrorView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -24,4 +24,4 @@ class DtogafErrorView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("togafErrorView"));
+mixin(ViewCalls!("ErrorView"));

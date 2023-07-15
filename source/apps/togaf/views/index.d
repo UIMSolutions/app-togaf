@@ -8,16 +8,16 @@ module apps.togaf.views.index;
 import apps.togaf;
 @safe:
 
-class DtogafIndexView : DView {
-  mixin(ViewThis!("togafIndexView"));
+class DIndexView : DView {
+  mixin(ViewThis!("IndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DtogafIndexView~":DtogafIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DIndexView~":DindexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
-      H5Div("APP togaf -> Error")
+      H5Div("APP togaf -> IndexView")
     ].toH5;
   }
 }
-mixin(ViewCalls!("togafIndexView"));
+mixin(ViewCalls!("IndexView"));
