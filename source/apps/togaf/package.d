@@ -7,8 +7,10 @@ module apps.togaf;
 
 mixin(ImportPhobos!());
 
-// Dub
-public import vibe.d;
+// External
+public {
+  import vibe.d;
+}
 
 // UIM
 public import uim.core;
@@ -31,12 +33,17 @@ public {
 }
 
 static this() {
-  AppRegistry.register("apps.togaf",
-    App("togafApp", "/apps/togaf")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("togafApp", "apps/togaf");
+
+  with (myApp) {
+    importTranslations;
+    addControllers([
+      "togaf.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("togaf.index")),
+      Route("/", HTTPMethod.GET, controller("togaf.index"))
     );
+  }
+  AppRegistry.register("apps.togaf", myApp);
 }
